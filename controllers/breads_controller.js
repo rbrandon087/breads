@@ -14,6 +14,7 @@ breads.get('/', (req, res) => {
 })
 
 
+
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
   if (Bread[req.params.arrayIndex]) {
@@ -21,7 +22,7 @@ breads.get('/:arrayIndex', (req, res) => {
       bread:Bread[req.params.arrayIndex]
     })
   } else {
-    res.send('404')
+    res.render('error404')
   }
 })
 
