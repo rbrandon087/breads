@@ -19,6 +19,7 @@ function New () {
             name="image"
             id="image"
             pattern="https?://.*"
+            defaultImage
             />
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input
