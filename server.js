@@ -16,6 +16,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
+
 // ROUTES
 app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Breads')
@@ -35,5 +36,3 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 })
-
-
