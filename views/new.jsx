@@ -31,6 +31,7 @@ function New () {
           <br />
           <input type="submit"/>
         </form>
+
       </Default>
     )
 }
