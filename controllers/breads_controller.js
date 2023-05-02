@@ -4,15 +4,19 @@ const Bread = require('../models/bread.js')
 // somewhere at the top with the other dependencies 
 const Baker = require('../models/baker.js')
 
-// INDEX
+// Index:
 breads.get('/', (req, res) => {
-  Bread.find()
+  Baker.find()
+    .then(foundBakers => {
+      Bread.find()
       .then(foundBreads => {
           res.render('index', {
               breads: foundBreads,
+              bakers: foundBakers,
               title: 'Index Page'
           })
       })
+    })
 })
 
 // UPDATE
